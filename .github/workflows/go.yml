@@ -1,9 +1,8 @@
 name: Go
 on: [push]
 jobs:
-
   build:
-    name: Build
+    name: Test
     runs-on: ubuntu-latest
     steps:
 
@@ -20,5 +19,5 @@ jobs:
       run: |
         go get -v -t -d ./...
 
-    - name: Build
+    - name: Test
       run: go test -v ./cmd ./dkron
