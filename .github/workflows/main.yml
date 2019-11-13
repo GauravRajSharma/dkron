@@ -19,5 +19,9 @@ jobs:
       run: |
         go get -v -t -d ./...
 
-    - name: Test
+    - name: Test without docker
       run: go test -v ./cmd ./dkron
+    
+    - name: Test with docker
+      run: ./scripts/tests
+

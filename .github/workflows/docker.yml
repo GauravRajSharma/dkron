@@ -1,7 +1,0 @@
-name: CI
-on: [push]
-jobs:
-  runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args: ['scripts/test']
